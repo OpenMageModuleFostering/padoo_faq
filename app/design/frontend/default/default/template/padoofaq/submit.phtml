@@ -1,0 +1,62 @@
+<?php 
+	$data = $this->getDataByGroup();
+?>
+<div class="pd_formsearch" style="display:inline-block">
+	<?php if(Mage::getStoreConfig('faq/general/enable_search')): ?>
+	<form method="get" action="<?php echo $this->getUrl('faq/search/index')?>" name="faqsearch">
+		<div id="searchform">
+			<label for="keyword" class="">
+				<?php echo Mage::Helper('faq')->__('Search FAQ')?>
+			</label>
+			<input class="input_text" type="text" name="keyword" size="20" maxlength="150" onfocus="this.value='';"/>
+			<button type="submit" class="button" ><span><span><?php echo Mage::helper('faq')->__(' Search ') ?></span></span></button>
+		</div>
+	</form>
+	<?php endif; ?>
+	<a href="<?php echo $this->getUrl('faq/submit/index')?>"><?php echo Mage::Helper('faq')->__('Submit Question')?></a>
+</div>
+<div class="submit-form faq-form">
+	<h4 class="title"><?php echo $this->__('Write your Faq') ?>:</h4>
+	<form id="faq-form" action="<?php echo $this->getUrl('faq/submit/save/')?>" method="post" enctype="multipart/form-data">
+		<ul class="form-list">
+            <li class="wide">
+				<label class="required" for="name"><em>*</em><?php echo $this->__('Category') ?></label>
+				<div class="input-box">
+					<select class="validate-select required-entry" name="faq[category]">
+						<option class="">---Select one---</option>
+						<?php 
+							foreach ($data as $record){ 
+								echo '<option value="'. $record->getGroupId() .'" >';
+								echo $record->getGroupName();
+								echo '</option>';
+							}
+						?>
+					</select>
+				</div>
+			</li>
+			<li class="wide">
+				<label class="required"><em>*</em><?php echo Mage::Helper('faq')->__('Question') ?>:</label>
+				<div class="input-box">
+					<textarea name="faq[question]" class="required-entry input-text" rows="10" cols="80"></textarea>
+				</div>
+            </li>
+            <li class="wide">
+                <?php echo $this->getChildHtml('captcha'); ?>
+            </li>
+        </ul>
+		<div class="box-actions">
+			<button class="button" title="Send" type="submit" >
+				<span><span><?php echo Mage::Helper('faq')->__('Send') ?></span></span>
+			</button>
+			<button class="button" title="Reset" type="reset">
+				<span><span><?php echo Mage::Helper('faq')->__('Reset') ?></span></span>
+			</button>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+
+//<![CDATA[
+    var contactForm = new VarienForm('faq-form', true);
+//]]>
+</script>

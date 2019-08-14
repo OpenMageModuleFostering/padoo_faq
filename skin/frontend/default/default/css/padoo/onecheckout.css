@@ -1,0 +1,452 @@
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+.onecheckout-onepage-wrap{
+	/* position:relative; */
+}
+#load-info-overlay{
+	position:relative;
+	background:url('../../images/ecommerceteam/loadinfo.gif') 50% 50% no-repeat #fff;
+	opacity:0.8;
+	filter: alpha(opacity=50);
+	width:100%;
+	z-index:255;
+	display:none;
+}
+#sln-overlay-methods .img-load {
+	display: none;
+}
+.img-load {
+	background:url('../../images/padoo/ajax-loader-tr.gif') no-repeat;
+	width: 32px;
+	height: 32px;
+	position:absolute;
+	right: 0;
+	left:0;
+	bottom:0;
+	top:0;
+	margin:auto;
+}
+#onecheckout-form-wrap form{
+	zoom:1;
+}
+#onecheckout-form-wrap form ul{
+	margin:0;
+	padding:5px 10px;
+	list-style:none;
+	
+}
+
+#onecheckout-form-wrap form ul.right{
+	margin-right:38px;
+}
+
+#onecheckout-form-wrap .address-form-list li{
+	clear:both;
+	zoom:1;
+}
+#onecheckout-form-wrap .address-form-list label{
+	display:inline;
+	float:left;
+	width:130px;
+	text-align:left;
+}
+
+#onecheckout-form-wrap .form-list label.required em{
+	color: #eb340a;
+    float: left;
+    font-style: normal;
+	position:initial;
+}
+
+#onecheckout-form-wrap.onecheckout-3columns .address-form-list label{
+	width:110px;
+}
+
+#onecheckout-form-wrap .address-form-list .field {
+	width:auto;
+}
+#onecheckout-form-wrap .address-form-list .field .input-box{
+	clear:none;
+	width:auto;
+	float:left;
+}
+#onecheckout-form-wrap .easy-step{
+	display:block;
+	clear:both;
+	border:1px solid #ccc;
+	background:url('../../images/ecommerceteam/block.gif') 0 0 repeat-x #fff;
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+}
+#onecheckout-shipping-payment-step{
+	width:100%;
+	margin-bottom:10px;
+	position:relative;
+}
+
+#onecheckout-shipping-payment-step td{
+	border:1px solid #ccc;
+	
+}
+#onecheckout-shipping-payment-step td.shipping-method,
+#onecheckout-shipping-payment-step td.payment-method{
+	background:#fff;
+}
+#onecheckout-shipping-payment-step td.methods-separator{
+	width:10px;
+	border:0;
+}
+#onecheckout-shipping-payment-step td.shipping-method{
+	width:40%;
+}
+#onecheckout-form-wrap.onecheckout-3columns #onecheckout-shipping-payment-step td.shipping-method{
+	width:250px;
+}
+#onecheckout-form-wrap.onecheckout-3columns #onecheckout-shipping-payment-step td.shipping-method .easy-step{
+	width:220px;
+}
+#onecheckout-form-wrap.onecheckout-3columns #onecheckout-shipping-payment-step td.shipping-method .input-text{
+	width:215px;
+}
+#onecheckout-form-wrap .easy-step h2{
+	/* color:#E26703; */
+	font-size:16px;
+	font-weight:900;
+	margin:0;
+	padding: 10px;
+}
+#onecheckout-form-wrap .easy-step h2 span{
+	color:#333;
+	font-weight:100;
+	text-transform:none;
+}
+#onecheckout-form-wrap .easy-step h2 label{
+	display: block;
+}
+#onecheckout-form-wrap .address-form-list .fields .field{
+	width:50%;
+}
+#onecheckout-form-wrap .address-form-list .fields .field .input-box{
+	
+}
+
+
+#onecheckout-form-wrap .address-form-list .input-box input.input-text{
+	padding:3px;
+	width:252px;
+	background:url('../../images/ecommerceteam/inputbg.gif') 0 0 no-repeat #fff;
+}
+#onecheckout-form-wrap.onecheckout-3columns .address-form-list .fields .field .input-box{
+	width:152px;
+}
+#onecheckout-form-wrap.onecheckout-3columns .address-form-list .input-box input.input-text{
+	width:152px;
+}
+#onecheckout-form-wrap.onecheckout-3columns .address-form-list .input-box{
+	width:160px;
+}
+#onecheckout-form-wrap.onecheckout-3columns .address-form-list .input-box select{
+	width:160px;
+}
+#onecheckout-form-wrap.onecheckout-3columns .onecheckout-left-column{
+	float:left;
+	width:36%;
+	
+}
+#onecheckout-form-wrap.onecheckout-3columns .onecheckout-right-column{
+	float:right;
+	width:63%;
+}
+
+#onecheckout-form-wrap .address-form-list .input-box input.readonly{
+	color:#969696;
+	background:url('../../images/ecommerceteam/inputbg-readonly.gif') 0 0 no-repeat #e6e6e6;
+}
+
+#onecheckout-form-wrap .address-form-list .input-box select{
+	padding:2px;
+	background:url('../../images/ecommerceteam/inputbg.gif') 0 0 no-repeat #fff;
+}
+
+#onecheckout-form-wrap .address-form-list .input-box .validation-failed{
+	border:1px solid #EB340A  !important;
+	background:url('../../images/ecommerceteam/inputbg-error.gif') 0 0 no-repeat #fff !important;
+}
+
+#onecheckout-form-wrap  #onecheckout-shippingmethod,
+#onecheckout-form-wrap  #onecheckout-paymentmethod{
+	border:0;
+	margin:0;
+}
+
+#onecheckout-form-wrap  #onecheckout-review{
+	clear:both;
+	position:relative;
+}
+#onecheckout-form-wrap .validation-advice{
+	/*display:none;*/
+}
+#onecheckout-form-wrap .address-form-list .control label{
+	display:inline;
+	margin-right:17px;
+}
+#onecheckout-form-wrap fieldset{
+	padding-top:10px;
+}
+#onecheckout-form-wrap #checkout-review-table{
+	margin:10px 0;
+	border:1px solid #ddd;
+}
+#onecheckout-form-wrap #checkout-review-table thead th {
+	background:#eee;
+	border:0;
+	border-bottom:1px solid #ddd  !important;
+}
+#onecheckout-form-wrap #checkout-review-table tfoot tr{
+	background:#eee !important;
+}
+#onecheckout-form-wrap #checkout-review-table tfoot tr.first td {
+	background:url('../../images/ecommerceteam/totalsbg.gif') 0 0 repeat-x #eee;
+}
+
+#onecheckout-form-wrap #checkout-review-table .even{
+	background:#fff !important;
+}
+#onecheckout-form-wrap .button-set{
+	text-align:right;
+}
+#onecheckout-form-wrap.onecheckout-3columns .button-set{
+	float:left;
+}
+#onecheckout-shippingmethod .box-weight {
+	float: left;
+	width: 100%;
+	margin: 5px 0px 0px 0px;
+}
+#onecheckout-shippingmethod .box-weight p {
+	float: left;
+	width: 50%;
+}
+#onecheckout-shippingmethod .box-weight p span {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#elogin-buttons{
+	overflow:hidden;
+	zoom:1;
+}
+#elogin-message{
+	color:red
+}
+#elogin-loading{
+	background:url('../../images/ecommerceteam/elogin-loading.gif') center center no-repeat;
+	font-size:10px;
+	color:#666;
+	padding-top:5px;
+	height:20px;
+}
+#elogin-buttons{
+	padding-top:3px;
+	height:22px;
+}
+
+#onecheckout-coupon{
+	width: 50%;
+	float:left;
+}
+
+#onecheckout-coupon button{
+	margin-top:10px;
+}
+
+#onecheckout-coupon .button-set {
+	float: left;
+}
+
+#coupon_code{
+	width:90%;
+}
+
+.onecheckout-3columns #register-customer-password .field{
+	margin-bottom:8px;
+}
+#onecheckout-form-wrap #onecheckout-addressbilling select.address-select,
+#onecheckout-form-wrap #shipping-address-form select.address-select{
+	width:98%;
+}
+.one_step {
+	float: left;
+	width: 100%;
+}
+.one_step ul {
+	float: left;
+	width: 100%;
+	margin-left: 5%;
+}
+.one_step ul li {
+	float: left;
+    margin-top: 16px;
+    height: 60px;
+    width: 25%;
+}
+.one_step ul li strong {
+	color: #E26703;
+    float: left;
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 15px;
+	
+}
+.one_step ul li p {
+	float: left;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.checkout-5step ul {
+	margin-left: 2%;
+}
+.checkout-5step ul li {
+	width: 20%;
+}
+#myimage {
+	position: fixed;
+	top: 0px;
+	left: 400px;
+	background: #fff;
+	z-index: 9999;
+	width: 300px;
+	padding: 30px;
+}
+.easy-step .subscribe label {
+}
+#checkout-review-table .cat-image {
+	float: left;
+	margin-right: 10px;
+}
+#checkout-review-table dl.item-options{display: inherit;}
+#checkout-review-table .update,
+#checkout-review-table .delete {
+	background: url("../../images/padoo/bg-btn-delete.gif") no-repeat scroll 0 0 transparent;
+    line-height: 50px;
+    padding-left: 15px;
+	text-decoration: none;
+	text-align: right;
+	color: #000;
+	float: right;
+	margin: 20px 0px 0px 0px;
+}
+#checkout-review-table .update:hover,
+#checkout-review-table .delete:hover {
+	color: #E26703;
+}
+#checkout-review-table .update span,
+#checkout-review-table .delete span {
+	float: right;
+	line-height: 10px;
+}
+#checkout-review-table .update {
+	background: url("../../images/padoo/bg-btn-update.gif") no-repeat scroll 0 0 transparent;
+	margin: 17px 0px 0px 0px;
+}
+
+.checkout-agreements .agree {
+    margin: 0;
+    padding: 10px 0;
+}
+.checkout-agreements .agree  a{
+    text-decoration: none;
+}
+.checkout-agreements li {margin:0 !important;}
+.agreement-box{
+	bottom: 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+	z-index:10005;
+	background: rgba(0, 0, 0, 0.7) no-repeat 0 50%;
+	display:none;
+}
+.agreement-box .agreement-content{
+	background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #999999;
+    bottom: 0;
+    height: 150px;
+    left: 0;
+    margin: auto;
+    padding: 5px 5px 5px 20px;
+    position: absolute;
+    right: 0;
+    top: 0 !important;
+    width: 450px;
+	border-radius: 4px;
+	box-shadow: 0 0 4px 2px #888;
+	box-sizing:content-box;
+}
+.agreement-box .agreement-content span{
+	display: block;
+    height: 128px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    text-align: left;
+    width: 100%;
+}
+.agreement-box .agreement-content .close-confirm {
+	background: rgba(0, 0, 0, 0) url("../../images/padoo/controls.png") no-repeat scroll -50px 0;
+    bottom: 4px;
+    float: right;
+    left: 3px;
+    position: relative;
+	width: 20px;
+    height: 20px;
+}
+.comments{width: 50%; float: left;}
+.comments textarea{padding: 0; width: 99.5%;}
+.onestepcheckout-survey{
+	background: #f8f7f5;
+    margin: 10px;
+    padding: 10px;
+}
+.onestepcheckout-survey label{
+	display: block;
+    margin: 0 0 5px;
+}
+.onestepcheckout-survey select{
+	width: 50%;
+}
+.onestepcheckout-group{
+	display: inline-block;
+	padding: 1%;
+    width: 98%;
+}
+.onestepcheckout-group h2{padding: 10px 0 !important;}
+.onestepcheckout-giftmessage{
+	background:#f8f7f5;
+    margin: 10px;
+	padding: 1px 10px;
+}
+.onestepcheckout-giftmessage .onestepcheckout-form-list{
+	padding:0 !important;
+}
+.onestepcheckout-giftmessage .gift-messages{
+	 padding: 5px 0;
+}
+.onestepcheckout-form-list  .field {
+	width:49%;
+}
+.onestepcheckout-form-list  .field .input-box input {
+	width:98%;
+}
+.onestepcheckout-form-list  .input-box textarea {
+	width: 99%;
+}
+.delivery-box{
+	margin:10px 0;
+	padding: 5px 10px;
+}
+.delivery-box input {height:19px;}
+.enable-shipping,.group-method,#onecheckout-paymentmethod-available,#checkout-review-table-wrapper,.agreements,.subscribe,.delivery-enable{padding:5px 10px }

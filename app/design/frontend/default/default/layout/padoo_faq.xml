@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/faq/faq.css</stylesheet></action>
+			<action method="addItem"><type>js</type><name>padoo/jquery.js</name></action>
+			<action method="addItem"><type>js</type><name>padoo/jquery_noconflict.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/padoo/jquery.cycle.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/faq/faq.js</name></action>
+		</reference>
+		<reference name="top.links"> 
+			<action ifconfig="faq/general/toplink" method="addLink" translate="label title" module="faq"><label>FAQs</label><url helper="faq/getFaqUrl" /><title>FAQs</title><prepare/><urlParams/><position>10</position><aParams> <target>_blank</target> </aParams></action> 
+		</reference>
+	</default>
+	
+    <faq_index_index>   
+		<reference name="head">
+			<action method="setTitle"><title>FAQs</title></action>	
+			<action method="addCss"><stylesheet>css/faq/faq.css</stylesheet></action>
+			<action method="addItem"><type>js</type><name>padoo/jquery.js</name></action>
+			<action method="addItem"><type>js</type><name>padoo/jquery_noconflict.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/padoo/jquery.cycle.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/faq/faq.js</name></action>
+		</reference>
+      	<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="faq/faq" name="faq" template="padoofaq/faq.phtml">
+				<block type="faq/faq" name ="faq.group" >
+					<action method="setTemplate" ifconfig="faq/general/enable_group_left">
+						<template>padoofaq/faq_group.phtml</template> 
+					</action>
+				</block>
+			</block>
+        </reference>
+    </faq_index_index>
+	
+    <faq_search_index>
+		<reference name="head">
+			<action method="setTitle"><title>FAQs</title></action>	
+			<action method="addCss"><stylesheet>css/faq/faq.css</stylesheet></action>
+			<action method="addItem"><type>js</type><name>padoo/jquery.js</name></action>
+			<action method="addItem"><type>js</type><name>padoo/jquery_noconflict.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/padoo/jquery.cycle.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/faq/faq.js</name></action>
+		</reference>
+    	<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="faq/searchfaq" name="searchfaq" template="padoofaq/searchresult.phtml" />
+        </reference>
+    </faq_search_index>
+	
+	<faq_submit_index>
+		<reference name="head">
+			<action method="setTitle"><title>Submit Faq</title></action>	
+			<action method="addCss"><stylesheet>css/faq/faq.css</stylesheet></action>
+			<action method="addItem"><type>js</type><name>padoo/jquery.js</name></action>
+			<action method="addItem"><type>js</type><name>padoo/jquery_noconflict.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/padoo/jquery.cycle.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/faq/faq.js</name></action>
+		</reference>
+       	<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="faq/faq" name="faq.submit" template="padoofaq/submit.phtml" >
+				<!-- Code Start For Display Captcha on Register page -->
+				<block type="captcha/captcha" name="captcha">
+					<reference name="head">
+						<action method="addJs"><file>mage/captcha.js</file></action>
+					</reference>
+					<action method="setFormId"><formId>padoo_faq</formId></action>
+					<action method="setImgWidth"><width>230</width></action>
+					<action method="setImgHeight"><width>50</width></action>
+				</block> 
+				<!-- Code End For Display Captcha on Register page-->
+			</block> 
+        </reference>
+    </faq_submit_index>
+</layout> 

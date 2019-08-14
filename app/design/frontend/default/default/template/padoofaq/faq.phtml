@@ -1,0 +1,113 @@
+<script type="text/javascript">
+if (typeof jQuery == 'undefined')
+{
+    document.write(unescape("%3Cscript src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+</script>
+<?php
+	$data = $this->getDataByGroup();
+?>
+<div class="pd_formsearch" style="display:inline-block">
+	<?php if(Mage::getStoreConfig('faq/general/enable_search')): ?>
+	<form method="get" action="<?php echo $this->getUrl('faq/search/index')?>" name="faqsearch">
+		<div id="searchform">
+			<label for="keyword" class="">
+				<?php echo Mage::Helper('faq')->__('Search FAQ')?>
+			</label>
+			<input class="input_text" type="text" name="keyword" size="20" maxlength="150" onfocus="this.value='';"/>
+			<button type="submit" class="button" ><span><span><?php echo Mage::helper('faq')->__(' Search ') ?></span></span></button>
+		</div>
+	</form>
+	<?php endif; ?>
+	<?php if(Mage::getStoreConfig('faq/general/enable_submit')): ?>
+	<a href="<?php echo $this->getUrl('faq/submit/index')?>"><?php echo Mage::Helper('faq')->__('Submit Question')?></a>
+	<?php endif; ?>
+</div>
+<?php if(Mage::getStoreConfig('faq/general/enable_group_left')): ?>
+	<div class="col-main-faq">
+		<div class="faqs">
+		<?php foreach ($data as $record): ?>
+			<?php $groupId = $record->getGroupId(); ?>
+			<?php if(!empty($groupId)): ?>
+			<?php if($this->groupHasData($groupId)): ?>
+			<div class="box">
+				<div class="faq-content-group">
+					<hr class="solid">
+					<ul>
+						<?php 
+							$faqs = $this->getFaqs();
+							$totalItem = count($faqs);
+							$i=1;
+							foreach($faqs as $faq) :
+							$arrGroups = explode(',',$faq->getGroupId());
+							if(in_array($groupId,$arrGroups)){
+						?>
+							<li class="<?php echo $i % 2 == 0 ? 'even' : 'odd' ?>">
+								<div class="faqq"> </div>
+								<div class="faqopenindicator"> </div>
+								<p><?php echo $this->stripTags($faq->getFaq(), null, true) ?></p>
+								<div class="faq-content">
+									<?php echo $faq->getBody() ?>
+								</div>
+								<?php if($i < $totalItem): ?>
+								<hr class="dash">
+								<?php endif; ?>
+							</li>
+						<?php } ?>
+						<?php $i++;endforeach; ?>
+					</ul>
+					<hr class="solid">
+				</div>
+			</div>
+			<?php endif; ?>
+			<?php endif; ?>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	<div class="col-left-faq sidebar">
+		<?php echo $this->getChildHtml('faq.group') ?>
+	</div>
+<?php else: ?>
+<h3 class="faq-title"><?php echo Mage::Helper('faq')->__('Frequently Asked Questions')?></h3>
+<div class="faqs">
+	<?php foreach ($data as $record): ?>
+	<?php $groupId = $record->getGroupId(); ?>
+	<?php if(!empty($groupId)): ?>
+	<?php if($this->groupHasData($groupId)): ?>
+	<div class="box">
+		<div class="faq-question-group">
+			<span class="faq-question"><?php echo $record->getGroupName() ?></span>
+		</div>
+		<div class="faq-content-group">
+			<hr class="solid">
+			<ul>
+				<?php 
+					$faqs = $this->getFaqs();
+					$totalItem = count($faqs);
+					$i=1;
+					foreach($faqs as $faq) :
+					$arrGroups = explode(',',$faq->getGroupId());
+					if(in_array($groupId,$arrGroups)){
+				?>
+					<li class="<?php echo $i % 2 == 0 ? 'even' : 'odd' ?>">
+						<div class="faqq"> </div>
+						<div class="faqopenindicator"> </div>
+						<p><?php echo $this->stripTags($faq->getFaq(), null, true) ?></p>
+						<div class="faq-content">
+							<?php echo $faq->getBody() ?>
+						</div>
+						<?php if($i < $totalItem): ?>
+						<hr class="dash">
+						<?php endif; ?>
+					</li>
+				<?php } ?>
+				<?php $i++;endforeach; ?>
+			</ul>
+			<hr class="solid">
+		</div>
+	</div>
+	<?php endif; ?>
+	<?php endif; ?>
+	<?php endforeach; ?>
+</div>
+<?php endif; ?>

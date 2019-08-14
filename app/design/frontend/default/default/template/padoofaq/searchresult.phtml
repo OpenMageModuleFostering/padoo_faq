@@ -1,0 +1,75 @@
+
+<div class="pd_formsearch" style="display:inline-block">
+	<?php if(Mage::getStoreConfig('faq/general/enable_search')): ?>
+	<form method="get" action="<?php echo $this->getUrl('faq/search/index')?>" name="faqsearch">
+		<div id="searchform">
+			<label for="keyword" class="">
+				<?php echo Mage::Helper('faq')->__('Search FAQ')?>
+			</label>
+			<input class="input_text" type="text" name="keyword" size="20" maxlength="150" value="<?php echo @$_GET['keyword'] ?>" />
+			<button type="submit" class="button" ><span><span><?php echo Mage::helper('faq')->__(' Search ') ?></span></span></button>
+		</div>
+	</form>
+	<?php endif; ?>
+	<a href="<?php echo $this->getUrl('faq/submit/index')?>"><?php echo Mage::Helper('faq')->__('Submit Question')?></a>
+</div>
+	<?php
+		$_keyword= $_GET['keyword'];
+		$exceptstrangesign = preg_replace('#[^0-9a-z]+#i', ' ', $_keyword);
+		$inputarrayword= array();
+		$inputarrayword=explode(' ',$exceptstrangesign);
+
+		$faqs= Mage::getResourceModel('faq/faq_collection');
+		if($_keyword!=''){
+			$where ="";
+			$where1 ="";
+			for($i=0;$i<count($inputarrayword);$i++)
+			{
+				$where .= "faq like '%".$inputarrayword[$i]."%' OR body like '%".$inputarrayword[$i]."%' OR ";
+			}
+			$where = substr($where,0,strlen($where)-4); 
+			$faqs->getSelect()->where($where)->where('status = ?', 1);
+			// Search in faq with faqname
+		}
+	?>
+
+	<?php if(count($faqs)): ?>
+	<div class="faqs result-search">
+		<div class="box">
+			<div class="faq-question-group">
+				<span class="faq-question"><?php echo "<h3>". Mage::Helper('faq')->__('Result for search : %s', $_keyword)." </h3>"; ?></span>
+			</div>
+			<?php 
+				$totalItem = count($bannerData);
+				$i=1;
+				foreach ($faqs as $record): ?>
+			<div class="faq-content-group">
+				<?php if($i == 1): ?>
+				<hr class="solid">
+				<?php endif; ?>
+				<ul>
+					<li class="<?php echo $i % 2 == 0 ? 'even' : 'odd' ?>">
+						<div class="faqq"> </div>
+						<div class="faqopenindicator"> </div>
+						<p><?php echo $this->stripTags($record->getFaq(), null, true) ?></p>
+						<div class="faq-content">
+							<?php 
+								$des = $record->getBody(); 
+								/* for($i=0;$i<count($inputarrayword);$i++){
+									$des = str_replace($inputarrayword[$i],"<b>". $inputarrayword[$i] ."</b>" ,$des);
+								} */
+								echo $des;
+							?>
+						</div>
+					</li>
+				</ul>
+				<hr class="solid">
+			</div>
+			<?php $i++;endforeach; ?>
+		</div>	
+	</div>	
+	<?php else: ?>
+		<br/>
+		<br/>
+		<h3><?php echo Mage::Helper('faq')->__('No result for : %s', $_keyword) ?></h3>
+	<?php endif; ?>	

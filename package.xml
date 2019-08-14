@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<package>
+    <name>padoo_faq</name>
+    <version>1.0.4</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/gpl-license.php">GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Allow Admin create topics  answers. And allow  your customers submit and search question.</summary>
+    <description>&lt;div&gt;&#xD;
+	&lt;p&gt;Normally, Customers  will  always have some questions in mind before decision to purchase  products. But ours are not always available online to answer to their questions,  and  more question is reduplicate, and Customers are not patient enough to wait through your site for answers.&lt;/p&gt;&#xD;
+	&lt;p&gt;And to increase sale chance and make satisfied to customers. You can install and use FAQs extension. The extension allow customers submit, search questions. It also allow you create group questions And display list answers by topic.&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div&gt;&#xD;
+	&lt;h3&gt;Features and benefits&lt;/h3&gt;&#xD;
+	&lt;ul&gt;&#xD;
+		&lt;li&gt;100% opensource&lt;/li&gt;&#xD;
+		&lt;li&gt;Very easy to install and use&lt;/li&gt;&#xD;
+		&lt;li&gt;Doesn&#x2019;t override core Magento ( core class or core template)&lt;/li&gt;&#xD;
+                &lt;li&gt;Support responsive for difference devices&lt;/li&gt;&#xD;
+		&lt;li&gt;Works perfectly with popular browsers including Firefox, Chrome, IE  and Safari&lt;/li&gt;&#xD;
+		&lt;li&gt;Friendly and easy to configurable&lt;/li&gt;&#xD;
+		&lt;li&gt;Compatibility: Magento CE 1.4, 1.5, 1.6, 1.7, 1.8, 1.9&lt;/li&gt;&#xD;
+	&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div&gt;&#xD;
+	&lt;h3&gt;How to use the our FAQs extension&lt;/h3&gt;&#xD;
+	&lt;ol&gt;&#xD;
+		&lt;li&gt;Install via Magentoconnect or get it from our site Mage-addons.com&lt;/li&gt;&#xD;
+		&lt;li&gt;Configuration FAQ options are available in administration panel: System --&amp;gt; Configuration --&amp;gt; Padoosoft extension --&amp;gt; FAQ&lt;img alt="" src="http://www.mage-addons.com/media/wysiwyg/faq/settings.png" /&gt;&lt;/li&gt;&#xD;
+		&lt;li&gt;On the backend, go to FAQ =&amp;gt; Manage FAQ Group&lt;img alt="" src="http://www.mage-addons.com/media/wysiwyg/faq/manage-faq-group.png" /&gt;&#xD;
+To create a new group, click on the Add FAQ Group button:&#xD;
+You can input the name, order and select the displaying store view, then enable the category.&#xD;
+&lt;img alt="" src="http://www.mage-addons.com/media/wysiwyg/faq/add-faq-group.png" /&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;On the backend, go to FAQ =&amp;gt; Manage FAQ&#xD;
+&lt;img alt="" src="http://www.mage-addons.com/media/wysiwyg/faq/manage-faq.png" /&gt;&#xD;
+To create a new item, click on the Add FAQ button: &#xD;
+You can input the order, question, answer and select the parent group, the displaying store view, then enable the FAQ items.&#xD;
+&lt;img alt="" src="http://www.mage-addons.com/media/wysiwyg/faq/add-faq.png" /&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;By default, you can find the link to FAQs page from the homepage or any page of the system.&#xD;
+If you want display FAQs list on a static page, from the backend, go to CMS =&amp;gt; Static Pages and create a new static page, then insert the syntax code below into the Content section:&#xD;
+{{block type=&amp;quot;faq/faq&amp;quot; name=&amp;quot;faq.list&amp;quot; template=&amp;quot;padoofaq/faq.phtml&amp;quot; }}&#xD;
+&lt;img alt="" src="http://www.mage-addons.com/media/wysiwyg/faq/faqs-page.png" /&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;Customers can submit their own question at the frontend. After finishing, their question will be listed at Manage FAQ page from the backend to wait for the store owner&#x2019;s answer.&#xD;
+To navigate to the submit form, customer can click on the Submit Question link at top of FAQs list page.&#xD;
+&lt;img alt="" src="http://www.mage-addons.com/media/wysiwyg/faq/submit-faq.png" /&gt;&#xD;
+&lt;/li&gt;&#xD;
+	&lt;/ol&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div&gt;&#xD;
+	&lt;h3&gt;How to disable the extension&lt;/h3&gt;&#xD;
+	&lt;p&gt;Set &amp;quot;No&amp;quot; on System &amp;gt; Configuration&amp;gt; FAQ &amp;gt; General&lt;/p&gt;&#xD;
+	&lt;p&gt;Open the file Padoo_Faq.xml and change the following line: &#xD;
+Form True&#xD;
+To False&#xD;
+&lt;/p&gt;&#xD;
+&lt;/div&gt;</description>
+    <notes>Allow Admin create topics  answers. And allow  your customers submit and search question.</notes>
+    <authors><author><name>Padoosoft</name><user>MageAddons82</user><email>stdspace@gmail.com</email></author></authors>
+    <date>2016-03-25</date>
+    <time>03:13:06</time>
+    <contents><target name="magelocal"><dir name="Padoo"><dir name="Faq"><dir name="Block"><dir name="Adminhtml"><dir name="Faq"><dir name="Edit"><file name="Form.php" hash="93f1a80648b54563a4e1e4850d3c6fd2"/><dir name="Tab"><file name="Form.php" hash="a397d40f65464acc18a3d73d33f241ba"/></dir><file name="Tabs.php" hash="2e86e10b6a1e4b449a68bf4e443197aa"/></dir><file name="Edit.php" hash="e077fd1f8fa7723f3b8c20c2b6663b74"/><file name="Grid.php" hash="5a8cd6f850a1241f17cc6aa029b3779a"/></dir><file name="Faq.php" hash="96510fd75bd33556b3fd73d1e66eb2f9"/><dir name="Faqgroup"><dir name="Edit"><file name="Form.php" hash="659297097bc7dbcc7f5648b3257ea192"/><dir name="Tab"><file name="Faq.php" hash="bd9c48fed2658787db0d02457961b7b3"/><file name="Form.php" hash="1dca67e0a4d6fb989b88f752bb67190a"/><file name="Gridfaq.php" hash="e72fc7a9c103d081adb77b449f65f113"/><file name="_Gridfaq.php" hash="e72fc7a9c103d081adb77b449f65f113"/></dir><file name="Tabs.php" hash="29f4588133c5b1535b34df9e489475de"/></dir><file name="Edit.php" hash="12a24ccc3fe368942a48b7596928876a"/><file name="Grid.php" hash="ee8cf8526a668a09740d5458bda422ca"/></dir><file name="Faqgroup.php" hash="eaea17115b814250e865ca7caf3c1fb9"/><dir name="Widget"><dir name="Grid"><file name="Column.php" hash="04f8db550ac1073f227f5648499fcf62"/></dir><file name="Grid.php" hash="a53292e4f0d8e5dba887e3a0d2109832"/></dir></dir><file name="Faq.php" hash="c3692ef0f98962d1e0a21c566968f379"/><file name="Searchfaq.php" hash="c542d4825487c00fcd6de5fd506426d1"/></dir><dir name="Helper"><file name="Data.php" hash="ea24883dc88a8c7a335bcc1e84780ccc"/></dir><dir name="Model"><file name="Faq.php" hash="dccdf5982e6bf20d9a1b3fa99c60e491"/><file name="Faqgroup.php" hash="dec59e429f37ef757248d4d7f8f06b71"/><dir name="Mysql4"><dir name="Faq"><file name="Collection.php" hash="12df56757c989a45a794d856103c9cd4"/></dir><file name="Faq.php" hash="237400041bd67faaf94fc407d4c6baa0"/><dir name="Faqgroup"><file name="Collection.php" hash="6d1b50122359eefcfb57b03735ee951f"/></dir><file name="Faqgroup.php" hash="1a179f09e1d04f8efd48b76b4bfaf925"/></dir><file name="Status.php" hash="098c68332efa6a151271cd8382f06a1f"/><dir name="Wysiwyg"><file name="Config.php" hash="0008426aba15e4cf7c2781ab66f29f41"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="FaqController.php" hash="6d10e85ecbd2dea93e1880d0a4080d9b"/><file name="FaqgroupController.php" hash="50e3db8bca66f6e55704791596c46d56"/></dir><file name="IndexController.php" hash="ada992be7d620d39ff7aa4c2a12dee9a"/><file name="SearchController.php" hash="e8ac3d510aff4366112cd0edf3faf2a2"/><file name="SubmitController.php" hash="60600af05d4851d0e839e8551fdfa005"/></dir><dir name="etc"><file name="adminhtml.xml" hash="109fc5e1f2b9b55e283265947e9c658c"/><file name="config.xml" hash="4c264d8cc8974805df58f0e3cbb59923"/><file name="system.xml" hash="ffe9ab472a66915732aeb8726fc7f79d"/></dir><dir name="sql"><dir name="faq_setup"><file name="mysql4-install-1.0.0.php" hash="0a96315166e8e9bd7490acca8c93bf76"/><file name="mysql4-upgrade-1.0.1-1.0.2.php" hash="99d4f2aa3e42606091535de4511eec96"/><file name="mysql4-upgrade-1.0.3-1.0.4.php" hash="45c45a821b5ab58c7957f5e0fb8717cc"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Padoo_Faq.xml" hash="711da934bfb9f6961aaf03a79cec922b"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="padoo_faq.xml" hash="25c436ea0f809dcef0420fd0d979017e"/></dir><dir name="template"><dir name="padoofaq"><file name="faq.phtml" hash="c7ee1d1a5e168ce6d65e51065fc79f15"/><file name="faq_group.phtml" hash="4e14a92d5fc517c24fbf88d19d49b9ef"/><file name="js.phtml" hash="db1fa4fcfc639a28a4a4b884f40649d5"/><file name="search.phtml" hash="928a5b5973e306f00fb69d3cf74bb04f"/><file name="searchresult.phtml" hash="28bae2892db4405e096bd499f50a29bf"/><file name="submit.phtml" hash="8e555c816242b8260eabbe3bba72fb29"/></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><file name="Padoo_Faq.csv" hash="6defcec67ba4f06573d97a545b5dad82"/></dir></target><target name="mage"><dir name="js"><dir name="padoo"><file name="checkValue.js" hash="963c1c86bbd0462be3c4793399a86024"/><file name="jquery.js" hash="b08031186fb28716dcbb38bcbd3ace0d"/><file name="jquery_noconflict.js" hash="afdd9b4ecb226d898fe655136f849752"/><file name="scriptaculous.js" hash="b592273cfa1d97643325ad77f7030879"/><file name="simplecheckout.js" hash="7158c0b30c4fbf2cbfc9b87c3f065043"/><file name="storelocator.js" hash="4cd94ab10a4cd421fff843a3854f71c4"/><file name="tinybox.js" hash="7e8a0b5f8e639947f494c9668caa169c"/></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="css"><dir name="faq"><file name="faq.css" hash="54a1020deae47a785ec03c78cad6e230"/><file name="label.css" hash="0f7a40cc43673394cd81672c24ad0631"/></dir><dir name="padoo"><file name="jquery-ui.css" hash="c932ef4ca169d744a94855e65fa39531"/><file name="jquery.bxslider.css" hash="951b49dc2e2d9639063f8d74fae1c8f9"/><file name="onecheckout.css" hash="e98e06328b5870f6900fad90b473fb7a"/><dir name="storelocator"><file name="navigation.png" hash="e9c107ff5505cdcc8b1a56b582785be5"/><file name="navigation1.png" hash="4059251ab55fe554770ec860167e279f"/><file name="tag-bg.png" hash="6ed007475c32ee2d35c7133dba65dea9"/><file name="vssver2.scc" hash="4a0203452e42133d03bba0f121cc392d"/></dir><file name="storelocator.css" hash="455f9cad3c21e072f34bdc0ba6c6c768"/><file name="testimonial.css" hash="11f853c031875b77b31ff818bccd8682"/><file name="tinybox.css" hash="dd735dee70c031110a582ce2f037b009"/></dir></dir><dir name="images"><dir name="faq"><file name="bg-answer.gif" hash="d9f4183b7dd6fe3d97dbfe2969c73134"/><file name="bg-question.gif" hash="475be89d7286debf1e46fd21fd7a059d"/><file name="vbulletin_sprites.png" hash="1215f199cba0d6d4e9379fafc3bbfea1"/></dir></dir><dir name="js"><dir name="faq"><file name="faq.js" hash="ee385c26a2f8e7ae62c56a5365d19ea7"/><file name="jquery-1.3.2.min.js" hash="7d91ff87b2c0439ac76c5af0bccb877b"/><file name="jquery.js" hash="23ba6db947a7a48ddaeab3164537dd55"/></dir><dir name="padoo"><file name="jquery.bxslider.js" hash="eea4ef92150fe92c5e75aef6507d06cf"/><file name="jquery.cycle.js" hash="ce83808c0a5a3fd7143adc6fdd6295f3"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

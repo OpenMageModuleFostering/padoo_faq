@@ -1,0 +1,83 @@
+.testimonials-container {}
+.testimonials-container .title-box { position: relative;}
+.testimonials-container .title-box a {
+	position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 15px;
+}
+.testimonials-container .title {
+	border-bottom: 1px solid #ccc;
+    margin: 0 0 30px;
+	font-size: 25px;
+}
+.testimonials-container .testimonials {}
+.testimonials-container .testimonials .testimonial-image {
+	float: left;
+    margin: 0 10px 10px 0;
+}
+.testimonials-container .testimonials .testimonial-text {
+	border-bottom: 1px solid #ccc;
+    margin: 0 0 15px;
+    min-height: 150px;
+}
+.testimonials-container .testimonials .testimonial-text .author,
+.sidebar-box .sidebar-name{ 
+	text-align: right;
+    font-style: italic;
+}
+.testimonials-sidebar{}
+.testimonials-sidebar .block-title{}
+.testimonials-sidebar .block-content{}
+.testimonials-sidebar .block-content .sidebar-box{
+    margin: 0 0 10px;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	width: 100% !important;
+}
+.testimonials-sidebar .block-content .sidebar-box.last{border:0}
+.testimonials-sidebar .block-content .sidebar-box .sidebar-media img{width:100%;text-align:center}
+.testimonials-sidebar .block-content .sidebar-box .sidebar-text{}
+.testimonials-sidebar .block-content .sidebar-box .sidebar-name{}
+
+.testimonials-slider li {height: 200px;}
+.testimonials-container.slider .testimonial-item{padding: 5px 10px 0 0;}
+.testimonials-container.slider .testimonial-text{padding-top: 5px;}
+.testimonials-container.slider .bx-controls .bx-controls-direction{display:none}
+.testimonials-container.slider figure {text-align: center;padding: 0 0 5px;}
+.testimonials-container.slider figure img{
+	display: inline-block;
+	width: 120px;
+}
+.testimonials-container.slider .author{
+	font-style: italic;
+    text-align: center;
+	color: #f5831f;
+}
+.testimonials-container.slider blockquote::before {
+    color: #ccc;
+    content: "“";
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 30px;
+    font-style: normal;
+    left: 3px;
+    position: absolute;
+    top: -3px;
+    width: 55px;
+}
+.submit-form h4.title { 
+	font-size: 22px;
+    margin: 0 0 15px;
+}
+.submit-form .field label {
+    display: block;
+    margin: 0 0 5px;
+}
+.submit-form .field input[type='text'] {
+    border: 1px solid #ccc;
+    height: 20px;
+    width: 50%;
+}
+.submit-form .field {
+    margin: 0 0 15px;
+}

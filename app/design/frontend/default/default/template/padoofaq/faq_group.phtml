@@ -1,0 +1,50 @@
+<?php
+/**
+ * Padoo Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0).
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you are unable to obtain it through the world-wide-web, please send
+ * an email to info@padoo.com so we can send you a copy immediately.
+ *
+ * @category   Padoo
+ * @package    Padoo_FAQ
+ * @copyright  Copyright (c) 2010-2012 Padoo Co. (http://padoo.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/**
+ * side box template of faq
+*/
+?>
+<?php
+	$groups 		= $this->getGroups();
+	$defaultGroup 	= $this->_groupId;
+?>
+<?php if (Mage::getStoreConfig('faq/general/enable')): ?>
+	<div class="block block-account faq-sidebar">
+		<div class="block-title">
+			<strong><span><?php echo $this->__('FAQ Topics') ?></span></strong>
+		</div>
+		<div class="block-content">
+			<ul>
+			<?php $i=0;foreach ($groups as $group): ?>
+				<?php if($this->groupHasData($group->getGroupId())): ?>
+					<?php if($group->getGroupId() == $defaultGroup): ?>
+					<li class="current">
+						<strong><?php echo $group->getGroupName() ?></strong>
+					</li>
+					<?php else: ?>
+					<li>
+						<a href="<?php echo $this->getUrl('faq',array('id' => $group->getGroupId())); ?>"><?php echo $group->getGroupName() ?></a>
+					</li>
+					<?php endif; ?>
+				<?php endif; ?>
+			<?php $i++;endforeach; ?>
+			</ul>
+		</div>
+	</div>
+<?php endif; ?>

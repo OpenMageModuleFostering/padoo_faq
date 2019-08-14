@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/padoo_faq",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPL)",
+    "homepage": "",
+    "description": "Allow Admin create topics  answers. And allow  your customers submit and search question.",
+    "authors": [
+    {
+        "name": "Padoosoft",
+        "email": "stdspace@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

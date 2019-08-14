@@ -1,0 +1,122 @@
+.col-main-faq{
+	width: 70%;
+	float: right;
+}
+.col-left-faq{
+	width: 25%;
+	float: left;
+}
+.col-main-faq .faq-title{
+	margin:0px;
+}
+.col-main-faq .faqs{
+	margin:0px;
+}
+hr.solid {
+    background-color: #b2b3b4;
+    border: medium none;
+    color: #b2b3b4;
+    height: 1px;
+}
+
+hr.dash {
+    background-color: transparent;
+    border-bottom: 1px dashed #b2b3b4;
+    border-top: medium none;
+    color: #b2b3b4;
+    height: 0;
+}
+.faq-title{
+	color:#001c32;
+	font-family: "Ubuntu";
+    font-size: 25px;
+	margin: 20px 0;
+}
+.faqs{
+	margin: 20px 0;
+}
+.faqs .box{
+	margin: 0 0 25px;
+}
+.pd_formsearch{
+	background: none repeat scroll 0 0 #efefef;
+    border: 1px solid #d4cfff;
+    display: inline-block;
+    padding: 5px 0 10px;
+    margin: 0px 0 20px;
+    width: 100%;
+	border-radius: 4px;
+}
+#searchform {padding:0 10px}
+.pd_formsearch label{
+	display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+.pd_formsearch input{ 
+	height: 20px;
+    width: 500px;
+	padding:0 10px;
+}
+.pd_formsearch > a{
+	background: none repeat scroll 0 0 #b8cef7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: table;
+    margin: 10px 10px 0;
+    padding: 6px 10px;
+    text-decoration: none;
+	font-weight: bold;
+	color:#000;
+}
+.faqs .box .faq-question-group{
+	color: #009dcb;
+	font-family: "Ubuntu";
+    font-size: 16px;
+	padding: 5px 0;
+}
+.faqs .box .faq-question-group .faq-question{font-weight: bold;}
+.faqs .box.active .faq-content-group{ display:none}
+.faqs .box .faq-content-group ul,
+.result-search .faq-content{
+	list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.faqs .box .faq-content-group li.odd{background:#dbdee1}
+.faqs .box .faq-content-group li.even{background:#efefef}
+.faqs .box .faq-content-group li.active {background:#fff}
+.faqs .box .faq-content-group li:last-child hr{border-bottom:0}
+.faqs .box .faq-content-group ul li .faqq{
+	background: url("../../images/faq/vbulletin_sprites.png") no-repeat scroll -336px 0 rgba(0, 0, 0, 0);
+    float: left;
+    height: 7px;
+    margin: 8px 10px 0 5px;
+    padding: 5px 0;
+    width: 13px;
+}
+.faqs .box .faq-content-group ul li .faqopenindicator{
+	background: url("../../images/faq/vbulletin_sprites.png") no-repeat scroll -384px 0 rgba(0, 0, 0, 0);
+    float: right;
+    height: 7px;
+    margin: 8px 10px 0 0;
+    padding: 5px 0;
+    width: 15px;
+}
+.faqs .box .faq-content-group li.active  .faqq{background-position:-352px 0}
+.faqs .box .faq-content-group li.active  .faqopenindicator{background-position:-400px 0}
+.faqs .box .faq-content-group ul li .faq-content{padding:5px 0 10px 30px;background:#fff;display:none}
+.faqs .box .faq-content-group li > p{cursor: pointer;font-weight: bold;padding: 7px 30px 7px 20px;margin: 0; }
+.faqs.result-search .box .faq-content{display:none}
+.submit-form{margin: 40px 0 20px;width:100%}
+.submit-form .title{color: #a3bce6;font-size: 18px;}
+.submit-form .field {margin: 0 0 15px}
+.submit-form .field label{display: block;margin: 0 0 10px;}
+.faq-sidebar .sidebar-box {
+	box-sizing: border-box;
+    margin: 0 0 10px;
+    padding: 10px 5px;
+    width: 100% !important;
+}
+.faq-sidebar .sidebar-question{font-weight:bold}

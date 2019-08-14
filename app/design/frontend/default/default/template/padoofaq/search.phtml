@@ -1,0 +1,15 @@
+
+<div class="pd_formsearch" style="display:inline-block">
+	<?php if(Mage::getStoreConfig('faq/general/enable_search')): ?>
+	<form method="get" action="<?php echo $this->getUrl('faq/search/index')?>" name="faqsearch">
+		<div id="searchform">
+			<label for="keyword" class="">
+				<?php echo Mage::Helper('faq')->__('Search FAQ')?>
+			</label>
+			<input class="input_text" type="text" name="keyword" size="20" maxlength="150" onfocus="this.value='';"/>
+			<button type="submit" class="button" ><span><span><?php echo Mage::helper('faq')->__(' Search ') ?></span></span></button>
+		</div>
+	</form>
+	<?php endif; ?>
+	<a href="<?php echo $this->getUrl('faq/submit/index')?>">Submit Question</a>
+</div>

@@ -1,0 +1,8 @@
+jQuery(document).ready(function(){
+	jQuery.noConflict();
+	jQuery(".faq-content-group li").each(function(){
+		jQuery(this).find('p').click(function(){
+			jQuery(this).parent().find(".faq-content").slideToggle().parent().toggleClass( "active" );
+		});
+	});
+});
