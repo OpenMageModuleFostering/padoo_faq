@@ -4,9 +4,6 @@
         <Padoo_Faq>
             <active>true</active>
             <codePool>local</codePool>
-			<depends>
-				<Padoo_Pcore/>
-			</depends>
         </Padoo_Faq>
     </modules>
 </config> 

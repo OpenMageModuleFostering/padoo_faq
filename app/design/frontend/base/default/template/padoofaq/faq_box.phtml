@@ -1,0 +1,83 @@
+<?php
+/**
+ * Padoo Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0).
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you are unable to obtain it through the world-wide-web, please send
+ * an email to info@padoo.com so we can send you a copy immediately.
+ *
+ * @category   Padoo
+ * @package    Padoo_FAQ
+ * @copyright  Copyright (c) 2010-2012 Padoo Co. (http://padoo.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/**
+ * side box template of faq
+*/
+?>
+<?php
+	$data = $this->getDataByGroup();
+?>
+<?php if (Mage::getStoreConfig('faq/general/enable')): ?>
+	<div class="block faq-sidebar">
+		<div class="block-title">
+			<strong><span><?php echo $this->__('Faq') ?></span></strong>
+		</div>
+		<div class="block-content">
+			<div id="slideshow_faq">
+			<?php $i=0;foreach ($data as $record): ?>
+				<?php $groupId = $record->getGroupId(); ?>
+				<?php 
+					$faqs = $this->getFaqs();
+					$totalItem = count($faqs);
+					foreach($faqs as $faq) :
+						$arrGroups = explode(',',$faq->getGroupId());
+						if(in_array($groupId,$arrGroups)){
+				?>
+						<?php if(!Mage::getStoreConfig('faq/general/effects') && $i >2 ) break; ?>
+						<div class="sidebar-box <?php if($i++ == $last): ?>last<?php endif; ?>">
+							<div class="sidebar-question">
+								<?php 
+									$length = 50;
+									$ques = $this->stripTags($faq->getFaq()); 
+									$ques = strlen($ques) > $length ? substr($ques,0, $length) .' ...' : $ques;
+									echo $ques;
+								?>
+							</div>
+							<div class="sidebar-text">
+								<?php 
+									$length = 100;
+									$des = $this->stripTags($faq->getBody()); 
+									$des = strlen($des) > $length ? substr($des,0, $length) .' ...' : $des;
+									echo $des;
+								?>
+							</div>
+						</div>
+					<?php } ?>
+				<?php endforeach; ?>
+			<?php $i++;endforeach; ?>
+			</div>
+			<div class="actions">
+				<a href="<?php echo $this->getUrl('faq'); ?>"><?php echo $this->__('All Faqs'); ?></a>
+			</div>
+		</div>
+	</div>
+	<?php if(Mage::getStoreConfig('faq/general/effects')): ?>
+	<script type="text/javascript">
+	var effect_slide_faq = "<?php echo Mage::getStoreConfig('faq/general/effects_type'); ?>";
+	var effect_time_faq = "<?php echo Mage::getStoreConfig('faq/general/time_effect') ? Mage::getStoreConfig('faq/general/time_effect') : 0 ?>" * 1000;
+	jQuery(document).ready(function() {
+	   jQuery('#slideshow_faq').cycle({
+			//fade, fadeZoom, cover, uncover, shuffle, zoom, wipe, toss, turnDown, turnUp, scrollDown, scrollUp .
+			fx: effect_slide_faq,
+			timeout:  effect_time_faq		
+		});
+	});
+	</script>
+	<?php endif; ?>
+<?php endif; ?>

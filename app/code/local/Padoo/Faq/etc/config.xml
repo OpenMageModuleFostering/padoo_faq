@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Padoo_Faq>
-            <version>1.0.4</version>
+            <version>1.0.5</version>
         </Padoo_Faq>
     </modules>
     <frontend>
@@ -53,7 +53,7 @@
 				<always_for>
 					<faq>1</faq>
 				</always_for>
-				<forms>padoo_faq</forms>
+				<forms>faq</forms>
 			</captcha>
 		</customer>
 	</default>    
